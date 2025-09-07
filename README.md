@@ -4,6 +4,8 @@
 
 This is a coursework assignment, which is why the code is commented in Spanish. Other unusual practices, such as establishing a single connection for each communication with the server, are requirements of the project.
 
+To summarize, the project consists of a client–server TLS socket connection, where user credentials must be stored securely by using a dedicated salt server to manage the salts for the hashed passwords. The client must be able to send messages to the server, and the server must keep track of the number of messages each user sends.
+
 ## Why TLS 1.3
 
 TLS 1.3 is the latest version of the TLS protocol. TLS, which is used by HTTPS and other network protocols for encryption, is the modern version of SSL. TLS 1.3 dropped support for older, less secure cryptographic features, and it sped up TLS handshakes, among other improvements.
@@ -93,3 +95,4 @@ To create the databases, run the following command:
 ```sql
 source resources/database.sql;
 ```
+
