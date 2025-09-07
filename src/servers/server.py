@@ -38,11 +38,9 @@ Lógica del manejo de la sesión:
 
 # Session se usa para la conexión a la base de datos
 async def handle_client(conn, addr, Session):
-    print(f"Conexión establecida con: {addr}")
     
     with conn:
         data = conn.recv(1024).decode('utf-8')
-        print(f"Mensaje recibido: {data}")
 
         message = json.loads(data)
         action = message.get("ACTION")

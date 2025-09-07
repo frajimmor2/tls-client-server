@@ -80,7 +80,6 @@ def request_handler(data):
                     ssock.sendall(msg)
                     response = ssock.recv(1048576).decode()
                     response = json.loads(response)
-                    print("Response: ", response)
                     ssock.close()
 
                     return response

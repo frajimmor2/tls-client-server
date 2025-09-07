@@ -32,7 +32,7 @@ async def log_in_server_logic(Session, lock, message):
         comprobar = verify_password(password, salt, user.password)
         
         if comprobar:
-            print("Funciona login para el usuario: " + username)
+            
             session_id = secrets.randbits(1024) #session_id generada
             response = {"status": "200", "message": session_id}
         else:
