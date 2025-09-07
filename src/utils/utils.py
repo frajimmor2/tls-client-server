@@ -41,7 +41,6 @@ def save_salt_in_salt_server_request(data):
             response = s.recv(1048576).decode()
             response = json.loads(response)
             status = response.get("status")
-            print("Save salt response:", response)
             if status != "200":
                 raise Exception("Error al guardar la salt")
     except Exception as e:
